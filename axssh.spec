@@ -30,3 +30,10 @@ install -m 644 README %{buildroot}/%{_docdir}/%{name}
 %files
 %doc README
 %{_bindir}/axssh
+
+
+%changelog
+* Thu May 10 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.4-1
++ Revision: 798061
+- imported package axssh
+
