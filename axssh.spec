@@ -1,39 +1,31 @@
-Name:         axssh
-License:      GPL
-Group:        Communications
-Version:      0.4
-Release:      1
-Summary:      Secure login with linemode and ssh
-Source0:      axssh-%{version}.tar.gz
-Url:	      http://tools.assembla.com/svn/hamradio	      
+Summary:	Secure login with linemode and ssh
+Name:		axssh
+Version:	0.4
+Release:	2
+License:	GPLv2+
+Group:		Communications
+Url:		http://tools.assembla.com/svn/hamradio
+Source0:	axssh-%{version}.tar.gz
+Requires:	openssh-clients
 
 %description
-Axssh is a linemode wrapper for SSH via 
-Amateur Packet Radio links
-
-Authors:
---------
-    Jörg Reuter <jreuter@yaina.de>
-
-%prep
-%setup -q -n axssh-%{version}
-
-%build
-%make
-
-%install
-install -d -m 755 %{buildroot}/%{_bindir}
-install -d -m 755 %{buildroot}/%{_docdir}/%{name}
-install -s -m 755 axssh %{buildroot}/%{_bindir}/
-install -m 644 README %{buildroot}/%{_docdir}/%{name}
+Axssh is a linemode wrapper for SSH via Amateur Packet Radio links.
 
 %files
 %doc README
 %{_bindir}/axssh
 
+#----------------------------------------------------------------------------
 
-%changelog
-* Thu May 10 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.4-1
-+ Revision: 798061
-- imported package axssh
+%prep
+%setup -q
+
+%build
+%make CFLAGS="%{optflags}"
+
+%install
+install -d -m 755 %{buildroot}/%{_bindir}
+install -d -m 755 %{buildroot}/%{_docdir}/%{name}
+install -m 755 axssh %{buildroot}/%{_bindir}/
+install -m 644 README %{buildroot}/%{_docdir}/%{name}
 
