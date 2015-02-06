@@ -1,7 +1,7 @@
 Summary:	Secure login with linemode and ssh
 Name:		axssh
 Version:	0.4
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Communications
 Url:		http://tools.assembla.com/svn/hamradio
