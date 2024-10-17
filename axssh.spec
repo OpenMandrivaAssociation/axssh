@@ -4,7 +4,7 @@ Version:	0.4
 Release:	3
 License:	GPLv2+
 Group:		Communications
-Url:		http://tools.assembla.com/svn/hamradio
+Url:		https://tools.assembla.com/svn/hamradio
 Source0:	axssh-%{version}.tar.gz
 Requires:	openssh-clients
 
